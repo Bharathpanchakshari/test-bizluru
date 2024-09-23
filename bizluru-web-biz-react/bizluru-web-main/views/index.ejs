@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="../public/stylesheets/style.css" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter" />
+    </head>
+    
+    <body class="height-100vh">
+        <div class="logged_in_nav">
+            <div class="flex">
+                <div>
+                    <img src="../public/images/bizluru_logo.png" alt="bizluru-logo" />
+                </div>
+            </div>
+        </div>
+        <div class="flex flex_column height-80vh">
+            <div class="flex height-40vh">
+                <div class="card height-315 width-335">
+                    <form method="POST" action="/login" class="mb-0">
+                        <div class="flex_column">
+                            <div>
+                                <span>Log in with SSO</span>
+                            </div>
+                            <hr style="width: 100%; margin-top: 15px; margin-bottom: 20px;" />
+                            <button id="Google" name="login_method" value="GoogleOAuth" class="card login_button google_button">
+                                <span>Continue With Google </span>
+                            </button>
+                            <button id="Microsoft" name="login_method" value="phone" class="card login_button phone_button">
+                                <span>Sign Up With Mobile</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,28 @@
+{
+  "name": "bizluru-app",
+  "version": "1.0.0",
+  "description": "Notion Bizluru App Integration with SSO,MFA",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ./index.js"
+  },
+  "author": "WorkOS",
+  "dependencies": {
+    "@notionhq/client": "^2.2.13",
+    "@workos-inc/node": "^2.18.0",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "express-session": "^1.17.2",
+    "morgan": "^1.10.0",
+    "nodemailer": "^6.9.5",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
+}

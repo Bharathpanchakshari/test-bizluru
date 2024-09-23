@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="../public/stylesheets/style.css" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter" />
+    </head>
+    
+    <body class="container_success">
+        <div class="logged_in_nav">
+        </div>
+        <div class="flex">
+            <div class="logged_in_div_right">
+
+                <div class="logged_in_nav">
+                    <div>
+                        <img src="../public/images/bizluru_logo.png" alt="bizluru-logo" />
+                    </div>
+                    <div>
+                        <a href="#"><button class="button button-outline">Profile Details</button></a>
+                    </div>
+                        <div class="flex flex_column height-80vh">
+                            <div class="flex height-40vh">
+                                <% if (verify_factor.valid) { %>
+                                <div class="card height-615 width-335">
+                                    <form method="POST" action="/registerUser" class="mb-0">
+                                        <div class="flex_column">
+                                            <div>
+                                                <span>Register</span>
+                                            </div>
+                                            <hr style="width: 100%; margin-top: 15px; margin-bottom: 20px;" />
+                                            <input type="text" class="card login_button " placeholder="Brand Name" name="brandname" required>
+                                            <input type="text" class="card login_button " placeholder="Products" name="products" required>
+                                            <input type="text" class="card login_button " placeholder="Tell us something about your brand" name="details" required>
+                                            <input type="url" class="card login_button " placeholder="Instagram/Website Link" name="instaweblink" pattern="https://.*" required>
+                                            <input type="tel" class="card login_button " placeholder="Email Address" name="profileEmailId"  required>
+                                            <div>
+                                                <button type="submit" class="card login_button ">Submit</button>
+                                            </div>
+                                            
+                                        </div>
+                                    </form>
+                                </div>
+                                <% } else { %>
+                                    <div class="flex width-587px">
+                                        <a href="/signup"><button type="button" class="button button-sm">Try Again</button></a>
+                                    </div>
+                                <% } %>
+                            </div>
+                        </div>
+                        <div class="flex">
+                            <div>
+                                <a href="/clear_session">
+                                    <button class="button button-outline">
+                                        Log Out
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
